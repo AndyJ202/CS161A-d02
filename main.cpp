@@ -1,80 +1,53 @@
-// ------------- FILE HEADER -------------
-// Author ✅: 
-// Assignment ✅:
-// Date ✅:
-// Citations: 
-
-
-// ------------- ZYBOOKS SCORES -------------
-// Chapter ✅: 
-// Participation ✅: 
-// Challenge ✅:
-// Labs ✅:
-
-
-// ------------- DISCORD POSTS -------------
-// https://discord.com/invite/URYKKf8YHm
-// Count ✅:
-// Links (Optional): 
-
-
-// ------------- DESIGN DOCUMENT -------------
-// A. INPUT ✅: 
-// B. OUTPUT ✅:
-// C. CALCULATIONS ✅:
-// D. LOGIC and ALGORITHMS ✅:
-//    (Optional) flow chart link or file name: 
-
-
-// ------------- TESTING -------------
-// PASS ALL GIVEN SAMPLE RUN TESTS ✅: 
-// (Optional) Additional tests count:   
-
-
-// ------------- CODE -------------
+/******************************************************************************
+# Author:           Andy Joy
+# Assignment:       Discussion 2
+# Date:             04/19/2026
+# Description:      This program will perform calculations to determine the gas
+#                   cost for 20 miles, 75 miles, and 500 miles.
+# Input:            Vehicle MPG (double), gas price per gallon (double).
+# Output:           Cost of gas for each distance.
+# Sources:          N/A
+#******************************************************************************/
 #include <iostream>
-
+#include <iomanip>
 using namespace std;
 
-// Function prototypes (if any)
+//main function
+int main() {
 
+  //variables declared
+  double vehicleMPG = 0.0;
+  double gasPrice = 0.0;
+  double cost20Miles = 0.0;
+  double cost75Miles = 0.0;
+  double cost500Miles = 0.0;
 
-// Main function
-// https://en.cppreference.com/w/cpp/language/main_function.html
-int main(int argc, char* argv[]) {
-  cout << "Hello, World!" << endl;
+  //user input
+  cout << "Welcome to Driving Costs Calculator!" << endl << endl;
+  cout << "Enter your vehicle's miles per gallon (MPG): ";
+  cin >> vehicleMPG;
+  cout << "Enter the price per gallon of gas: $";
+  cin >> gasPrice;
+  cout << endl;
+
+  //calculations
+  cost20Miles = (20 / vehicleMPG) * gasPrice;
+  cost75Miles = (75 / vehicleMPG) * gasPrice;
+  cost500Miles = (500 / vehicleMPG) * gasPrice;
+
+  //output to the user
+  cout << fixed << setprecision(2);
+  cout << setw(10) << left  << "Miles" << "|";
+  cout << setw(12) << right << "Cost of Gas" << endl;
+  cout << setfill('-') << setw(23) << "" << endl;
+  cout << setfill(' ');
+  cout << setw(10) << left  << "20" << "|";
+  cout << setw(4) << right << "$" << cost20Miles << endl;
+  cout << setw(10) << left  << "75" << "|";
+  cout << setw(4) << right << "$" << cost75Miles << endl;   
+  cout << setw(10) << left  << "500" << "|";
+  cout << setw(4) << right << "$" << cost500Miles << endl;
+  cout << setfill('-') << setw(23) << "" << endl;
+
   return 0;
 }
-
-// Function implementations (if any)
-
-
-// ------------- DESIGN -------------
-/* 
-Program Name:
-
-Program Description:
-
-Design:
-A. INPUT
-Define the input variables including name data type. 
-
-B. OUTPUT
-Define the output variables including data types. 
-
-C. CALCULATIONS
-Describe calculations used by algorithms in step D.  
-List all formulas. 
-If there are no calculations needed, state there are no calculations.
-
-D. LOGIC and ALGORITHMS
-Design the logic of your program using pseudocode or flowcharts. 
-Use conditionals, loops, functions or array constructs.
-List the steps in transforming inputs into outputs. 
-https://github.com/Glen-Sasek-PCC-Instructor/2025-06-22/blob/main/Pseudocode-Reference.txt
-
-
-SAMPLE RUNS
-Copy from assignment document.
-
-*/
